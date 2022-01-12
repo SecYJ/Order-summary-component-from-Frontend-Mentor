@@ -1,0 +1,141 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&family=Red+Hat+Display:wght@500;700;900&display=swap");
+
+:root {
+	--primary-pale-blue: hsl(225, 100%, 94%);
+	--primary-bright-purple: hsl(245, 75%, 52%);
+	--accent-pale-blue: hsl(225, 100%, 98%);
+	--accent-light-blue: hsl(224, 23%, 55%);
+	--accent-dark-blue: hsl(223, 47%, 23%);
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-size: 1rem;
+	font-family: "Red Hat Display", sans-serif;
+	background-image: url(./images/pattern-background-mobile.svg);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-color: var(--primary-pale-blue);
+	display: grid;
+	place-items: center;
+	min-height: 100vh;
+	padding: 0 1rem;
+}
+
+button {
+	border: none;
+	outline: none;
+	cursor: pointer;
+	font: inherit;
+	background: none;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+.card {
+	max-width: 375px;
+	border-radius: 0.5rem;
+	overflow: hidden;
+}
+
+.card-img {
+	height: 250px;
+}
+
+.card-img > img {
+	object-fit: cover;
+	height: 100%;
+}
+
+.card-body {
+	background: #fff;
+	padding: 1.5rem;
+	text-align: center;
+}
+
+.card-title {
+	margin-top: 0.5rem;
+	margin-bottom: 1.5rem;
+	font-weight: 900;
+	color: var(--accent-dark-blue);
+}
+
+.card-text {
+	color: var(--accent-light-blue);
+	margin-bottom: 1rem;
+	letter-spacing: 0.05em;
+}
+
+.card-music-wrapper {
+	display: grid;
+	grid-template-columns: auto 1fr auto;
+	align-items: center;
+	gap: 1rem;
+	padding: 1rem;
+	background: var(--accent-pale-blue);
+	border-radius: 0.5rem;
+	margin-bottom: 1.5rem;
+}
+
+.card-music-icon {
+	width: 2rem;
+	height: 2rem;
+	border-radius: 50%;
+	overflow: hidden;
+}
+
+.card-music-plan p {
+	color: var(--accent-dark-blue);
+	text-align: left;
+}
+
+.card-music-plan p + p {
+	color: var(--accent-light-blue);
+	margin-top: 0.25rem;
+}
+
+.card-change-btn {
+	color: var(--primary-bright-purple);
+	text-decoration: underline;
+	background: none;
+	font-weight: 700;
+	font-size: 1.1rem;
+}
+
+.proceed-btn {
+	width: 100%;
+	color: var(--accent-pale-blue);
+	background: var(--primary-bright-purple);
+	font-weight: 900;
+	margin-bottom: 2rem;
+	transition: all 250ms;
+	padding: 0.75rem;
+	border-radius: 0.5rem;
+	/* box-shadow: 0 0.8rem 5px rgba(224, 232, 255, 0.9); */
+}
+
+.proceed-btn:hover {
+	transform: translateY(-3px);
+	background: rgba(56, 41, 224, 0.8);
+	/* box-shadow: 0 0.5rem 5px rgba(224, 232, 255, 0.9); */
+}
+
+.cancel-btn {
+	color: var(--accent-light-blue);
+	font-weight: 700;
+}
+
+@media (min-width: 1440px) {
+	body {
+		background-image: url(./images/pattern-background-desktop.svg);
+		background-position: top;
+	}
+}
